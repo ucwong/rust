@@ -1,11 +1,11 @@
-use ferris_says::say; // from the previous step
-use std::io::{stdout, BufWriter};
+// src/main.rs
+
+// Note the lack of the `#[link]` attribute. We’re delegating the responsibility
+// of selecting what to link over to the build script rather than hard-coding
+// it in the source file.
+extern { fn hello(); }
 
 fn main() {
-    let stdout = stdout();
-    let message = String::from("Hello fellow Rustaceans!");
-    let width = message.chars().count();
-
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
+    unsafe { hello(); }
 }
+
