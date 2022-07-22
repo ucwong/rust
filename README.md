@@ -5,6 +5,8 @@ The playground of rust
 
 https://doc.rust-lang.org/stable/rust-by-example/
 
+https://github.com/rust-lang/rust-by-example
+
 ### Tool
 
 https://doc.rust-lang.org/stable/cargo/
